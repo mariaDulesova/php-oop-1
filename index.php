@@ -7,10 +7,10 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
 - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà -->
 
 <?php 
-    $body1 = "Gabby, the waitress in an isolated Arizona diner, dreams of a bigger and better life. One day penniless intellectual Alan drifts into the joint and the two strike up a rapport. Soon enough, notorious killer Duke Mantee takes the diner's inhabitants hostage. Surrounded by miles of desert, the patrons and staff are forced to sit tight with Mantee and his gang overnight.";
-    $body2 ="For ten years, engineer Bill Markham has searched tirelessly for his son Tommy who disappeared from the edge of the Brazilian rainforest. Miraculously, he finds the boy living among the reclusive Amazon tribe who adopted him. And that's when Bill's adventure truly begins. For his son is now a grown tribesman who moves skillfully through this beautiful-but-dangerous terrain, fearful only of those who would exploit it. And as Bill attempts to \"rescue\" him from the savagery of the untamed jungle, Tommy challenges Bill's idea of true civilization and his notions about who needs rescuing.";
-    $body3= "In the not too distant future, two young women who live in a remote ancient forest discover the world around them is on the brink of an apocalypse. Informed only by rumor, they fight intruders, disease, loneliness &amp; starvation.";
-    $body4 = "John McKenna is a spiritual being who is able to transform into bear, wolf or eagle. He lives in the forests of Tanglewood and has dedicated his life to protect them. One day a gang of evil lumberjacks led by Travis Thorne arrive Tanglewood to chop the forest down. McKenna cannot let this happen, and together with his new friends - Lords of the Tanglewood, a band of children who love to play in the forest - he battles against Thorne and his evil gang.";
+    $overview1 = "Gabby, the waitress in an isolated Arizona diner, dreams of a bigger and better life. One day penniless intellectual Alan drifts into the joint and the two strike up a rapport. Soon enough, notorious killer Duke Mantee takes the diner's inhabitants hostage. Surrounded by miles of desert, the patrons and staff are forced to sit tight with Mantee and his gang overnight.";
+    $overview2 ="For ten years, engineer Bill Markham has searched tirelessly for his son Tommy who disappeared from the edge of the Brazilian rainforest. Miraculously, he finds the boy living among the reclusive Amazon tribe who adopted him. And that's when Bill's adventure truly begins. For his son is now a grown tribesman who moves skillfully through this beautiful-but-dangerous terrain, fearful only of those who would exploit it. And as Bill attempts to \"rescue\" him from the savagery of the untamed jungle, Tommy challenges Bill's idea of true civilization and his notions about who needs rescuing.";
+    $overview3= "In the not too distant future, two young women who live in a remote ancient forest discover the world around them is on the brink of an apocalypse. Informed only by rumor, they fight intruders, disease, loneliness &amp; starvation.";
+    $overview4 = "John McKenna is a spiritual being who is able to transform into bear, wolf or eagle. He lives in the forests of Tanglewood and has dedicated his life to protect them. One day a gang of evil lumberjacks led by Travis Thorne arrive Tanglewood to chop the forest down. McKenna cannot let this happen, and together with his new friends - Lords of the Tanglewood, a band of children who love to play in the forest - he battles against Thorne and his evil gang.";
 
     class Movie {
         //ATTRIBUTI/PROPRIETA'
@@ -33,10 +33,10 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
         }
     } 
 
-    $movie1 = new Movie("The Petrified Forest", $body1, "English", "1936-02-08");
-    $movie2 = new Movie("The Emerald Forest", $body2, "English", "1985-06-22");
-    $movie3 = new Movie("Into the Forest", $body3, "English", "2016-06-03");
-    $movie4 = new Movie ("Forest Warrior", $body4, "English", "1996-11-05")
+    $movie1 = new Movie("The Petrified Forest", $overview1, "English", "1936-02-08");
+    $movie2 = new Movie("The Emerald Forest", $overview2, "English", "1985-06-22");
+    $movie3 = new Movie("Into the Forest", $overview3, "English", "2016-06-03");
+    $movie4 = new Movie ("Forest Warrior", $overview4, "English", "1996-11-05")
 ?>
 
 <!DOCTYPE html>
@@ -53,18 +53,27 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
         <div class="container d-flex">
             <div class="w-25 p-3">
                 <h2><?= $movie1->title; ?></h2>
+                <small><?= $movie1 ->releaseDate;?></small>
+                <h4 class="mt-2">Description</h4>
                 <p><?= $movie1->getExcerpt();?></p>
+                
             </div> 
             <div class="w-25 p-3">
                 <h2><?= $movie2->title; ?></h2>
+                <small><?= $movie2->releaseDate;?></small>
+                <h4 class="mt-2">Description</h4>
                 <p><?= $movie2->getExcerpt();?></p>
             </div> 
             <div class="w-25 p-3">
                 <h2><?= $movie3->title; ?></h2>
+                <small><?= $movie3->releaseDate;?></small>
+                <h4 class="mt-2">Description</h4>
                 <p><?= $movie3->getExcerpt();?></p>
             </div> 
             <div class="w-25 p-3">
                 <h2><?= $movie4->title; ?></h2>
+                <small><?= $movie4->releaseDate;?></small>
+                <h4 class="mt-2">Description</h4>
                 <p><?= $movie4->getExcerpt();?></p>
             </div> 
         </div>
